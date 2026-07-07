@@ -87,15 +87,18 @@ my_hatebu/
 │   ├── migrate/
 │   │   └── YYYYMMDDHHMMSS_create_bookmarks.rb
 │   └── schema.rb
-├── spec/
-│   ├── requests/
-│   │   └── api/v1/bookmarks_spec.rb
+├── test/
+│   ├── controllers/
+│   │   └── api/v1/bookmarks_controller_test.rb
 │   ├── models/
-│   │   └── bookmark_spec.rb
-│   └── services/
-│       ├── bookmark_creator_service_spec.rb
-│       ├── web_fetcher_service_spec.rb
-│       └── summarizer_service_spec.rb
+│   │   └── bookmark_test.rb
+│   ├── services/
+│   │   ├── bookmark_creator_service_test.rb
+│   │   ├── web_fetcher_service_test.rb
+│   │   └── summarizer_service_test.rb
+│   ├── integration/
+│   │   └── api/v1/bookmarks_test.rb
+│   └── test_helper.rb
 ├── Dockerfile
 ├── docker-compose.yml
 ├── Gemfile
@@ -976,12 +979,10 @@ gem "rack-attack", "~> 6.7"
 gem "dotenv-rails", groups: [:development, :test]
 
 group :development, :test do
-  gem "rspec-rails", "~> 6.1"
-  gem "factory_bot_rails", "~> 6.4"
   gem "webmock", "~> 3.19"
   gem "rubocop", "~> 1.60", require: false
   gem "rubocop-rails", "~> 2.23", require: false
-  gem "rubocop-rspec", "~> 2.25", require: false
+  gem "rubocop-minitest", "~> 0.36", require: false
 end
 ```
 

@@ -4,7 +4,7 @@
 
 ### 1.1 Railsプロジェクトの作成
 
-- [ ] `rails new my_hatebu --api --database=postgresql --skip-test` でプロジェクトを生成する
+- [ ] `rails new my_hatebu --api --database=postgresql` でプロジェクトを生成する
 - [ ] Ruby 4.0.5 を `.ruby-version` に指定する
 - [ ] 不要なデフォルトファイル（mailer、job等）を削除する
 
@@ -20,8 +20,8 @@
 - [ ] `kaminari` を追加する
 - [ ] `rack-attack` を追加する
 - [ ] `dotenv-rails` を development/test グループに追加する
-- [ ] `rspec-rails`、`factory_bot_rails`、`webmock` を development/test グループに追加する
-- [ ] `rubocop`、`rubocop-rails`、`rubocop-rspec` を development/test グループに追加する
+- [ ] `webmock` を development/test グループに追加する
+- [ ] `rubocop`、`rubocop-rails`、`rubocop-minitest` を development/test グループに追加する
 - [ ] `bundle install` が成功する
 
 **受け入れ基準:**
@@ -42,16 +42,15 @@
 - アプリケーションコンテナからデータベースに接続できる
 - ソースコードの変更がコンテナ内に即時反映される
 
-### 1.4 RSpec の初期設定
+### 1.4 Minitest の初期設定
 
-- [ ] `rails generate rspec:install` を実行する
-- [ ] `spec/rails_helper.rb` に FactoryBot の設定を追加する
-- [ ] `spec/support/` ディレクトリを作成し、共通設定ファイルを配置する
-- [ ] WebMock の設定（外部通信の禁止）を追加する
+- [ ] `test/test_helper.rb` に WebMock の設定（外部通信の禁止）を追加する
+- [ ] `test/fixtures/` ディレクトリにフィクスチャファイルを配置する
+- [ ] テスト用ヘルパーメソッド（API認証ヘッダー付与等）を定義する
 
 **受け入れ基準:**
-- `bundle exec rspec` がエラーなく実行できる（テスト0件で正常終了）
-- FactoryBot のメソッドがテスト内で使用可能である
+- `bin/rails test` がエラーなく実行できる（テスト0件で正常終了）
+- WebMock による外部通信のブロックが有効である
 
 ---
 
@@ -458,15 +457,15 @@
 
 ---
 
-## 12. RSpec テストの実装
+## 12. Minitest テストの実装
 
 ### 12.1 モデルテスト
 
-- [ ] `spec/models/bookmark_spec.rb` を作成する
+- [ ] `test/models/bookmark_test.rb` を作成する
 - [ ] バリデーションのテスト（presence, uniqueness, format）を記述する
 - [ ] URL正規化のテストを記述する
 - [ ] 検索スコープのテストを記述する
-- [ ] ファクトリ（`spec/factories/bookmarks.rb`）を作成する
+- [ ] フィクスチャ（`test/fixtures/bookmarks.yml`）を作成する
 
 **受け入れ基準:**
 - 全バリデーションがテストされている
@@ -476,7 +475,7 @@
 
 ### 12.2 WebFetcherService テスト
 
-- [ ] `spec/services/web_fetcher_service_spec.rb` を作成する
+- [ ] `test/services/web_fetcher_service_test.rb` を作成する
 - [ ] WebMock を使用してHTTPリクエストをスタブする
 - [ ] 正常系（ページ取得成功）のテストを記述する
 - [ ] リダイレクト追従のテストを記述する
@@ -491,7 +490,7 @@
 
 ### 12.3 SummarizerService テスト
 
-- [ ] `spec/services/summarizer_service_spec.rb` を作成する
+- [ ] `test/services/summarizer_service_test.rb` を作成する
 - [ ] Bedrock API呼び出しをモック/スタブする
 - [ ] 正常系（要約取得成功）のテストを記述する
 - [ ] エラー系（API失敗で nil を返す）のテストを記述する
@@ -504,8 +503,8 @@
 
 ### 12.4 BookmarkCreatorService テスト
 
-- [ ] `spec/services/bookmark_creator_service_spec.rb` を作成する
-- [ ] WebFetcherService と SummarizerService をモックする
+- [ ] `test/services/bookmark_creator_service_test.rb` を作成する
+- [ ] WebFetcherService と SummarizerService をスタブする
 - [ ] 正常系（全処理成功）のテストを記述する
 - [ ] URL不正時のテストを記述する
 - [ ] URL重複時のテストを記述する
@@ -517,9 +516,9 @@
 - 外部サービスへの依存なしでテストが実行できる
 - テストが全て通る
 
-### 12.5 リクエストテスト（BookmarksController）
+### 12.5 コントローラテスト（BookmarksController）
 
-- [ ] `spec/requests/api/v1/bookmarks_spec.rb` を作成する
+- [ ] `test/controllers/api/v1/bookmarks_controller_test.rb` を作成する
 - [ ] 認証のテスト（正常認証、認証なし、不正キー）を記述する
 - [ ] POST /api/v1/bookmarks のテスト（正常系、エラー系）を記述する
 - [ ] GET /api/v1/bookmarks のテスト（一覧取得、ページネーション）を記述する
@@ -535,7 +534,7 @@
 
 ### 12.6 ヘルスチェックのテスト
 
-- [ ] `spec/requests/health_spec.rb` を作成する
+- [ ] `test/integration/health_test.rb` を作成する
 - [ ] 200レスポンスのテストを記述する
 - [ ] 認証不要であることのテストを記述する
 
