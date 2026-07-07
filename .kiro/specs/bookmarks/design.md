@@ -443,7 +443,7 @@ Client          Controller       CreatorService    WebFetcher     Summarizer    
 
 ```ruby
 # db/migrate/YYYYMMDDHHMMSS_create_bookmarks.rb
-class CreateBookmarks < ActiveRecord::Migration[7.1]
+class CreateBookmarks < ActiveRecord::Migration[8.1]
   def change
     create_table :bookmarks do |t|
       t.text :url, null: false
@@ -585,8 +585,8 @@ X-API-Key: your-api-key-here
     {
       "id": 1,
       "url": "https://example.com/article/123",
-      "title": "Rails 7.1の新機能",
-      "summary": "Rails 7.1で追加された新機能について...",
+      "title": "Rails 8.1の新機能",
+      "summary": "Rails 8.1で追加された新機能について...",
       "created_at": "2024-01-15T10:30:00Z",
       "updated_at": "2024-01-15T10:30:00Z"
     }
@@ -887,7 +887,7 @@ volumes:
 
 ```dockerfile
 # Dockerfile
-FROM ruby:3.3-slim
+FROM ruby:4.0-slim
 
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y \
@@ -954,9 +954,9 @@ end
 # Gemfile
 source "https://rubygems.org"
 
-ruby "3.3.0"
+ruby "4.0.5"
 
-gem "rails", "~> 7.1"
+gem "rails", "~> 8.1.3"
 gem "pg", "~> 1.5"
 gem "puma", ">= 5.0"
 

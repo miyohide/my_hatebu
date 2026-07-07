@@ -5,11 +5,11 @@
 ### 1.1 Railsプロジェクトの作成
 
 - [ ] `rails new my_hatebu --api --database=postgresql --skip-test` でプロジェクトを生成する
-- [ ] Ruby 3.3.0 を `.ruby-version` に指定する
+- [ ] Ruby 4.0.5 を `.ruby-version` に指定する
 - [ ] 不要なデフォルトファイル（mailer、job等）を削除する
 
 **受け入れ基準:**
-- `rails -v` で Rails 7.1.x が表示される
+- `rails -v` で Rails 8.1.x が表示される
 - APIモードで起動し、`/` へのリクエストに応答できる
 
 ### 1.2 Gemfileの整備
@@ -31,7 +31,7 @@
 
 ### 1.3 Docker Compose 環境の構築
 
-- [ ] `Dockerfile` を作成する（ruby:3.3-slim ベース、libpq-dev を含む）
+- [ ] `Dockerfile` を作成する（ruby:4.0-slim ベース、libpq-dev を含む）
 - [ ] `docker-compose.yml` を作成する（app + PostgreSQL 16）
 - [ ] PostgreSQL のヘルスチェック設定を追加する
 - [ ] ボリュームマウント（ソースコード、bundle_cache、postgres_data）を設定する

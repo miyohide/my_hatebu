@@ -6,8 +6,8 @@
 
 ## 技術スタック
 
-- バックエンド: Ruby on Rails（APIモード）
-- データベース: PostgreSQL
+- バックエンド: Ruby 4.0 / Rails 8.1（APIモード）
+- データベース: PostgreSQL 16
 - AI要約: Amazon Bedrock（Claude）
 - 認証: APIキーによる簡易認証
 
