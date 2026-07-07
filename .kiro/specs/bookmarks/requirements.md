@@ -7,7 +7,7 @@
 ## 技術スタック
 
 - バックエンド: Ruby 4.0 / Rails 8.1（APIモード）
-- データベース: PostgreSQL 16
+- データベース: SQLite3（開発/テスト）、PostgreSQL 16（本番）
 - AI要約: Amazon Bedrock（Claude）
 - 認証: APIキーによる簡易認証
 
@@ -165,7 +165,7 @@
 
 ### 3.5 開発環境
 
-- Docker Compose で開発環境を構築できること
+- 開発環境はローカルで簡単に起動できること（SQLite3使用のためDB構築不要）
 - Minitest によるテストを整備すること
 - RuboCop によるコードスタイルチェックを導入すること
 

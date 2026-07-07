@@ -4,7 +4,7 @@
 
 ### 1.1 Railsプロジェクトの作成
 
-- [ ] `rails new my_hatebu --api --database=postgresql` でプロジェクトを生成する
+- [ ] `rails new my_hatebu --api` でプロジェクトを生成する（デフォルトでsqlite3を使用）
 - [ ] Ruby 4.0.5 を `.ruby-version` に指定する
 - [ ] 不要なデフォルトファイル（mailer、job等）を削除する
 
@@ -14,7 +14,8 @@
 
 ### 1.2 Gemfileの整備
 
-- [ ] `pg`、`puma` の確認
+- [ ] `sqlite3`、`puma` の確認
+- [ ] `pg` を production グループに追加する
 - [ ] `aws-sdk-bedrockruntime` を追加する
 - [ ] `nokogiri` を追加する
 - [ ] `kaminari` を追加する
@@ -29,18 +30,16 @@
 - Gemfile.lock が生成される
 - 全ての必要なgemが正しいバージョンでインストールされる
 
-### 1.3 Docker Compose 環境の構築
+### 1.3 開発環境の整備
 
-- [ ] `Dockerfile` を作成する（ruby:4.0-slim ベース、libpq-dev を含む）
-- [ ] `docker-compose.yml` を作成する（app + PostgreSQL 16）
-- [ ] PostgreSQL のヘルスチェック設定を追加する
-- [ ] ボリュームマウント（ソースコード、bundle_cache、postgres_data）を設定する
-- [ ] `.env.example` を作成する
+- [ ] `.env.example` を作成する（API_KEY、AWS認証情報のテンプレート）
+- [ ] `config/database.yml` で development/test は sqlite3、production は postgresql を設定する
+- [ ] `storage/` ディレクトリが `.gitignore` に含まれていることを確認する
 
 **受け入れ基準:**
-- `docker compose up` でアプリケーションとデータベースが起動する
-- アプリケーションコンテナからデータベースに接続できる
-- ソースコードの変更がコンテナ内に即時反映される
+- `bin/rails db:create db:migrate` でSQLite3データベースが作成される
+- 外部DBサーバーなしで `bin/rails server` が起動する
+- `.env.example` に必要な環境変数が記載されている
 
 ### 1.4 Minitest の初期設定
 
@@ -58,12 +57,14 @@
 
 ### 2.1 database.yml の設定
 
-- [ ] `config/database.yml` を環境変数 `DATABASE_URL` に対応させる
-- [ ] development/test/production の各環境設定を記述する
+- [ ] development/test 環境で sqlite3 アダプタが設定されていることを確認する
+- [ ] production 環境で postgresql アダプタと `DATABASE_URL` が設定されていることを確認する
+- [ ] `storage/` ディレクトリが存在することを確認する
 
 **受け入れ基準:**
-- `DATABASE_URL` を設定すればデータベースに接続できる
-- Docker Compose 環境で `rails db:create` が成功する
+- development 環境で `rails db:create` が成功し、`storage/development.sqlite3` が生成される
+- test 環境で `rails db:create` が成功し、`storage/test.sqlite3` が生成される
+- production 環境では `DATABASE_URL` を参照する設定になっている
 
 ### 2.2 bookmarks テーブルのマイグレーション作成
 
@@ -102,7 +103,7 @@
 
 ### 3.2 検索スコープの実装
 
-- [ ] `search` スコープを定義する（ILIKE による部分一致検索）
+- [ ] `search` スコープを定義する（LIKE による部分一致検索）
 - [ ] タイトルと要約の両方を検索対象とする
 - [ ] `sanitize_sql_like` でSQLインジェクション対策を行う
 
@@ -110,7 +111,6 @@
 - キーワードでタイトルを検索できる
 - キーワードで要約を検索できる
 - 部分一致で検索結果が返る
-- 大文字小文字を区別しない検索ができる
 
 ---
 

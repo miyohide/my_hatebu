@@ -16,7 +16,7 @@
 
 ```
 ┌─────────────┐       ┌──────────────────────────────────────────┐
-│   Client    │       │           Docker Compose                  │
+│   Client    │       │           Application Server              │
 │  (curl等)   │       │                                          │
 └──────┬──────┘       │  ┌────────────────────────────────────┐  │
        │ HTTP         │  │         Rails API (port 3000)       │  │
@@ -33,8 +33,8 @@
                       │          │                  │              │
                       │          ▼                  ▼              │
                       │  ┌──────────────┐  ┌──────────────────┐   │
-                      │  │ PostgreSQL   │  │  外部サービス     │   │
-                      │  │ (port 5432)  │  │  ・Amazon Bedrock │   │
+                      │  │  Database    │  │  外部サービス     │   │
+                      │  │ SQLite3/PG   │  │  ・Amazon Bedrock │   │
                       │  └──────────────┘  │  ・対象Webページ  │   │
                       │                    └──────────────────┘   │
                       └───────────────────────────────────────────┘
@@ -51,7 +51,7 @@
 | WebFetcherService | 対象URLのWebページ取得とHTML解析 |
 | SummarizerService | Amazon Bedrockを利用したテキスト要約生成 |
 | Bookmark (Model) | データの永続化、バリデーション、検索クエリ |
-| PostgreSQL | データストア |
+| PostgreSQL / SQLite3 | データストア（本番: PostgreSQL、開発/テスト: SQLite3） |
 | Amazon Bedrock | AI要約生成（Claude モデル） |
 
 ---
@@ -99,8 +99,6 @@ my_hatebu/
 │   ├── integration/
 │   │   └── api/v1/bookmarks_test.rb
 │   └── test_helper.rb
-├── Dockerfile
-├── docker-compose.yml
 ├── Gemfile
 └── .env.example
 ```
@@ -197,7 +195,7 @@ class Bookmark < ApplicationRecord
   validates :url, format: { with: URI::DEFAULT_PARSER.make_regexp(%w[http https]) }
 
   scope :search, ->(query) {
-    where("title ILIKE :q OR summary ILIKE :q", q: "%#{sanitize_sql_like(query)}%")
+    where("title LIKE :q OR summary LIKE :q", q: "%#{sanitize_sql_like(query)}%")
   }
 
   # URL正規化（末尾スラッシュの統一、フラグメント除去）
@@ -469,7 +467,7 @@ end
 | index_bookmarks_on_url | url (UNIQUE) | 重複チェックの高速化、一意性保証 |
 | index_bookmarks_on_created_at | created_at (DESC) | 一覧表示の降順ソート高速化 |
 
-検索機能については、初期段階では `ILIKE` による部分一致検索を採用する。データ量が増加した場合は PostgreSQL の全文検索（`pg_trgm` 拡張）への移行を検討する。
+検索機能については、初期段階では `LIKE` による部分一致検索を採用する。SQLite3 の LIKE はデフォルトで大文字小文字を区別しないため、開発環境でも問題なく動作する。本番（PostgreSQL）では LIKE が大文字小文字を区別するが、データ量が増加した場合は PostgreSQL の全文検索（`pg_trgm` 拡張）への移行を検討する。
 
 ### 2.5 API リクエスト/レスポンス形式
 
@@ -804,7 +802,7 @@ Aws::BedrockRuntime::Client.new(
 
 | 環境変数名 | 必須 | デフォルト値 | 説明 |
 |-----------|------|------------|------|
-| `DATABASE_URL` | ○ | — | PostgreSQL接続文字列 |
+| `DATABASE_URL` | — | — | PostgreSQL接続文字列（本番環境のみ必須） |
 | `API_KEY` | ○ | — | APIアクセス用の認証キー |
 | `AWS_ACCESS_KEY_ID` | ○ | — | AWS認証（アクセスキーID） |
 | `AWS_SECRET_ACCESS_KEY` | ○ | — | AWS認証（シークレットキー） |
@@ -817,8 +815,8 @@ Aws::BedrockRuntime::Client.new(
 #### .env.example
 
 ```env
-# データベース
-DATABASE_URL=postgresql://postgres:password@db:5432/my_hatebu_development
+# データベース（本番環境のみ必要。開発/テストはSQLite3を使用）
+# DATABASE_URL=postgresql://postgres:password@localhost:5432/my_hatebu_production
 
 # 認証
 API_KEY=your-secret-api-key-here
@@ -837,78 +835,34 @@ RAILS_LOG_LEVEL=info
 RATE_LIMIT_PER_MINUTE=10
 ```
 
-### 5.2 Docker Compose 構成
+### 5.2 データベース設定
 
 ```yaml
-# docker-compose.yml
-version: "3.8"
+# config/database.yml
+default: &default
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 
-services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    depends_on:
-      db:
-        condition: service_healthy
-    environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/my_hatebu_development
-      - API_KEY=${API_KEY}
-      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
-      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-      - AWS_REGION=${AWS_REGION:-us-east-1}
-      - BEDROCK_MODEL_ID=${BEDROCK_MODEL_ID:-anthropic.claude-3-haiku-20240307-v1:0}
-    volumes:
-      - .:/app
-      - bundle_cache:/usr/local/bundle
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0"
+development:
+  <<: *default
+  adapter: sqlite3
+  database: storage/development.sqlite3
 
-  db:
-    image: postgres:16
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: my_hatebu_development
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
+test:
+  <<: *default
+  adapter: sqlite3
+  database: storage/test.sqlite3
 
-volumes:
-  postgres_data:
-  bundle_cache:
+production:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV["DATABASE_URL"] %>
 ```
 
-#### Dockerfile
+開発/テスト環境では SQLite3 を使用するため、外部DBサーバーの起動が不要で、`bin/rails server` だけですぐに開発を始められる。
 
-```dockerfile
-# Dockerfile
-FROM ruby:4.0-slim
-
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y \
-    build-essential \
-    libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-WORKDIR /app
-
-COPY Gemfile Gemfile.lock ./
-RUN bundle install
-
-COPY . .
-
-EXPOSE 3000
-
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
-```
+本番環境ではデプロイ先で PostgreSQL を使用し、`DATABASE_URL` 環境変数で接続情報を指定する。
 
 ### 5.3 Rack::Attack 設定
 
@@ -960,7 +914,7 @@ source "https://rubygems.org"
 ruby "4.0.5"
 
 gem "rails", "~> 8.1.3"
-gem "pg", "~> 1.5"
+gem "sqlite3", "~> 2.0"
 gem "puma", ">= 5.0"
 
 # AWS
@@ -983,6 +937,10 @@ group :development, :test do
   gem "rubocop", "~> 1.60", require: false
   gem "rubocop-rails", "~> 2.23", require: false
   gem "rubocop-minitest", "~> 0.36", require: false
+end
+
+group :production do
+  gem "pg", "~> 1.5"
 end
 ```
 
