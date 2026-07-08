@@ -32,9 +32,9 @@
 
 ### 1.3 開発環境の整備
 
-- [ ] `.env.example` を作成する（API_KEY、AWS認証情報のテンプレート）
-- [ ] `config/database.yml` で development/test は sqlite3、production は postgresql を設定する
-- [ ] `storage/` ディレクトリが `.gitignore` に含まれていることを確認する
+- [x] `.env.example` を作成する（API_KEY、AWS認証情報のテンプレート）
+- [x] `config/database.yml` で development/test は sqlite3、production は postgresql を設定する
+- [x] `storage/` ディレクトリが `.gitignore` に含まれていることを確認する
 
 **受け入れ基準:**
 - `bin/rails db:create db:migrate` でSQLite3データベースが作成される
