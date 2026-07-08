@@ -57,9 +57,9 @@
 
 ### 2.1 database.yml の設定
 
-- [ ] development/test 環境で sqlite3 アダプタが設定されていることを確認する
-- [ ] production 環境で postgresql アダプタと `DATABASE_URL` が設定されていることを確認する
-- [ ] `storage/` ディレクトリが存在することを確認する
+- [x] development/test 環境で sqlite3 アダプタが設定されていることを確認する
+- [x] production 環境で postgresql アダプタと `DATABASE_URL` が設定されていることを確認する
+- [x] `storage/` ディレクトリが存在することを確認する
 
 **受け入れ基準:**
 - development 環境で `rails db:create` が成功し、`storage/development.sqlite3` が生成される
@@ -68,13 +68,13 @@
 
 ### 2.2 bookmarks テーブルのマイグレーション作成
 
-- [ ] `rails generate migration CreateBookmarks` でマイグレーションを作成する
-- [ ] `url`（text, NOT NULL）カラムを追加する
-- [ ] `title`（text, デフォルト空文字）カラムを追加する
-- [ ] `summary`（text, デフォルト空文字）カラムを追加する
-- [ ] `timestamps` を追加する
-- [ ] `url` カラムにユニークインデックスを追加する
-- [ ] `created_at` カラムに降順インデックスを追加する
+- [x] `rails generate migration CreateBookmarks` でマイグレーションを作成する
+- [x] `url`（text, NOT NULL）カラムを追加する
+- [x] `title`（text, デフォルト空文字）カラムを追加する
+- [x] `summary`（text, デフォルト空文字）カラムを追加する
+- [x] `timestamps` を追加する
+- [x] `url` カラムにユニークインデックスを追加する
+- [x] `created_at` カラムに降順インデックスを追加する
 
 **受け入れ基準:**
 - `rails db:migrate` がエラーなく完了する
