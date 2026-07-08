@@ -1,0 +1,1316 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "Ruby 4.0.5 を `.ruby-version` に指定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641154
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431668137
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431858622
+      }
+    ],
+    "不要なデフォルトファイル（mailer、job等）を削除する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641272
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431867464
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432272001
+      }
+    ],
+    "`sqlite3`、`puma` の確認": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641303
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432284071
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432387362
+      }
+    ],
+    "`pg` を production グループに追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641333
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432391534
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432396018
+      }
+    ],
+    "`aws-sdk-bedrockruntime` を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641372
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432401361
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432406339
+      }
+    ],
+    "`nokogiri` を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641411
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432410892
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432414694
+      }
+    ],
+    "`kaminari` を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641434
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432419073
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432423367
+      }
+    ],
+    "`rack-attack` を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641484
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432427759
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432432420
+      }
+    ],
+    "`dotenv-rails` を development/test グループに追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641505
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432436749
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432441197
+      }
+    ],
+    "`webmock` を development/test グループに追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641529
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432445156
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432450619
+      }
+    ],
+    "`rubocop`、`rubocop-rails`、`rubocop-minitest` を development/test グループに追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641551
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432454941
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432459702
+      }
+    ],
+    "`bundle install` が成功する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641570
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432464329
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432468663
+      }
+    ],
+    "`.env.example` を作成する（API_KEY、AWS認証情報のテンプレート）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641592
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783432477635
+      }
+    ],
+    "`config/database.yml` で development/test は sqlite3、production は postgresql を設定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641610
+      }
+    ],
+    "`storage/` ディレクトリが `.gitignore` に含まれていることを確認する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641632
+      }
+    ],
+    "`test/test_helper.rb` に WebMock の設定（外部通信の禁止）を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641653
+      }
+    ],
+    "`test/fixtures/` ディレクトリにフィクスチャファイルを配置する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641671
+      }
+    ],
+    "テスト用ヘルパーメソッド（API認証ヘッダー付与等）を定義する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641724
+      }
+    ],
+    "development/test 環境で sqlite3 アダプタが設定されていることを確認する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641743
+      }
+    ],
+    "production 環境で postgresql アダプタと `DATABASE_URL` が設定されていることを確認する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641762
+      }
+    ],
+    "`storage/` ディレクトリが存在することを確認する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641786
+      }
+    ],
+    "`rails generate migration CreateBookmarks` でマイグレーションを作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641805
+      }
+    ],
+    "`url`（text, NOT NULL）カラムを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641828
+      }
+    ],
+    "`title`（text, デフォルト空文字）カラムを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641852
+      }
+    ],
+    "`summary`（text, デフォルト空文字）カラムを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641873
+      }
+    ],
+    "`timestamps` を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641893
+      }
+    ],
+    "`url` カラムにユニークインデックスを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641937
+      }
+    ],
+    "`created_at` カラムに降順インデックスを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641971
+      }
+    ],
+    "`app/models/bookmark.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431641995
+      }
+    ],
+    "`url` の presence バリデーションを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642025
+      }
+    ],
+    "`url` の uniqueness バリデーションを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642045
+      }
+    ],
+    "`url` の format バリデーション（HTTP/HTTPS のみ許可）を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642071
+      }
+    ],
+    "`before_validation` でURL正規化処理を実装する（末尾スラッシュ除去、フラグメント除去）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642095
+      }
+    ],
+    "`search` スコープを定義する（LIKE による部分一致検索）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642120
+      }
+    ],
+    "タイトルと要約の両方を検索対象とする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642141
+      }
+    ],
+    "`sanitize_sql_like` でSQLインジェクション対策を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642163
+      }
+    ],
+    "`app/services/web_fetcher_service.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642185
+      }
+    ],
+    "Result 構造体（success?, title, body_text, error）を定義する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642233
+      }
+    ],
+    "コンストラクタでURLを受け取る設計にする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642261
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643077
+      }
+    ],
+    "Net::HTTP を使用したHTTPリクエスト処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642287
+      }
+    ],
+    "タイムアウト設定（接続10秒、読取10秒）を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642307
+      }
+    ],
+    "User-Agent ヘッダー（`MyHatebuBot/1.0`）を設定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642330
+      }
+    ],
+    "リダイレクト追従処理を実装する（最大5回）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642352
+      }
+    ],
+    "HTTPS 対応を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642372
+      }
+    ],
+    "DNS解決後にIPアドレスを検証する処理を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642398
+      }
+    ],
+    "プライベートIP（10.x, 172.16.x, 192.168.x）へのアクセスを拒否する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642421
+      }
+    ],
+    "ループバック（127.x）へのアクセスを拒否する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642446
+      }
+    ],
+    "リンクローカル（169.254.x）へのアクセスを拒否する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642492
+      }
+    ],
+    "Nokogiri を使用したHTML解析処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642512
+      }
+    ],
+    "タイトル抽出（og:title 優先、fallback で title タグ）を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642539
+      }
+    ],
+    "本文テキスト抽出（script/style/nav/header/footer 除去）を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642564
+      }
+    ],
+    "抽出テキストの空白正規化と10,000文字制限を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642588
+      }
+    ],
+    "タイムアウト時のリトライ処理を追加する（最大2回リトライ）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642608
+      }
+    ],
+    "5xx系エラー時のリトライ処理を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642633
+      }
+    ],
+    "指数バックオフ（1秒、2秒）を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642657
+      }
+    ],
+    "4xx系エラーではリトライしない制御を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642676
+      }
+    ],
+    "`app/services/summarizer_service.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642702
+      }
+    ],
+    "コンストラクタでテキストを受け取り、8,000文字に切り詰める": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642753
+      }
+    ],
+    "`call` メソッドで要約テキスト（またはnil）を返す設計にする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642772
+      }
+    ],
+    "`Aws::BedrockRuntime::Client` の初期化処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642797
+      }
+    ],
+    "Converse API を使用したメッセージ送信処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642819
+      }
+    ],
+    "モデルID を環境変数から取得する（デフォルト: `anthropic.claude-3-haiku-20240307-v1:0`）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642840
+      }
+    ],
+    "inference_config（max_tokens: 1024, temperature: 0.3）を設定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642863
+      }
+    ],
+    "リトライ設定（retry_limit: 3, 指数バックオフ）を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642884
+      }
+    ],
+    "日本語で200〜400文字の要約を生成するプロンプトを作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642906
+      }
+    ],
+    "箇条書きではなく自然な文章で要約するよう指示する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642930
+      }
+    ],
+    "英語ページでも日本語で要約するよう指示する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642954
+      }
+    ],
+    "`Aws::BedrockRuntime::Errors::ServiceError` をキャッチする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642974
+      }
+    ],
+    "エラー時にログを出力し nil を返す処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431642998
+      }
+    ],
+    "エラー内容をRailsロガーで記録する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643020
+      }
+    ],
+    "`app/services/bookmark_creator_service.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643040
+      }
+    ],
+    "Result 構造体（success?, bookmark, error, status）を定義する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643064
+      }
+    ],
+    "URL形式のバリデーション処理を実装する（HTTP/HTTPS のみ許可）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643102
+      }
+    ],
+    "URL正規化処理を実装する（末尾スラッシュ、フラグメント除去）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643128
+      }
+    ],
+    "正規化後のURLで重複チェックを行う処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643152
+      }
+    ],
+    "不正URL時は422、重複時は409を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643173
+      }
+    ],
+    "WebFetcherService を呼び出してページ情報を取得する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643197
+      }
+    ],
+    "ページ取得成功時のみ SummarizerService を呼び出す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643220
+      }
+    ],
+    "取得結果をデータベースに保存する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643240
+      }
+    ],
+    "ページ取得失敗時はタイトル・要約を空文字で登録する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643262
+      }
+    ],
+    "要約生成失敗時は要約を空文字で登録する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643287
+      }
+    ],
+    "`app/controllers/concerns/api_key_authenticatable.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643307
+      }
+    ],
+    "`X-API-Key` ヘッダーからAPIキーを取得する処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643333
+      }
+    ],
+    "環境変数 `API_KEY` との照合処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643358
+      }
+    ],
+    "`ActiveSupport::SecurityUtils.secure_compare` でタイミング攻撃対策を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643408
+      }
+    ],
+    "認証失敗時に401 Unauthorized を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643432
+      }
+    ],
+    "`ApplicationController` に認証Concernを include する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643459
+      }
+    ],
+    "ヘルスチェックエンドポイントは認証をスキップする設定を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643484
+      }
+    ],
+    "`app/controllers/api/v1/bookmarks_controller.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643506
+      }
+    ],
+    "名前空間（Api::V1）を設定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643529
+      }
+    ],
+    "ApiKeyAuthenticatable を include する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643552
+      }
+    ],
+    "リクエストボディから `url` パラメータを取得する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643574
+      }
+    ],
+    "BookmarkCreatorService を呼び出す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643596
+      }
+    ],
+    "成功時は201とブックマーク情報をJSONで返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643621
+      }
+    ],
+    "失敗時は適切なステータスコードとエラーメッセージを返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643643
+      }
+    ],
+    "ブックマークを作成日時の降順で取得する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643667
+      }
+    ],
+    "Kaminari によるページネーション処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643692
+      }
+    ],
+    "デフォルト20件/ページの設定を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643722
+      }
+    ],
+    "レスポンスにページネーションメタ情報を含める": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643743
+      }
+    ],
+    "パスパラメータの `id` からブックマークを取得する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643768
+      }
+    ],
+    "ブックマーク情報をJSONで返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643796
+      }
+    ],
+    "存在しないIDの場合404を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643819
+      },
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643879
+      }
+    ],
+    "パスパラメータの `id` からブックマークを取得し削除する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643842
+      }
+    ],
+    "成功時は204 No Content を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643866
+      }
+    ],
+    "クエリパラメータ `q` でキーワードを受け取る": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643905
+      }
+    ],
+    "Bookmark.search スコープを利用して検索する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643929
+      }
+    ],
+    "結果を作成日時の降順でソートする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643954
+      }
+    ],
+    "ページネーション処理を実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431643974
+      }
+    ],
+    "`config/routes.rb` に API v1 の名前空間を設定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644001
+      }
+    ],
+    "bookmarks リソース（create, index, show, destroy）を定義する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644052
+      }
+    ],
+    "search コレクションルートを追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644075
+      }
+    ],
+    "ヘルスチェックルート（`/health`）を追加する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644097
+      }
+    ],
+    "`config/initializers/rack_attack.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644121
+      }
+    ],
+    "`/api/` パスへのリクエストに対してIPベースのスロットリングを設定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644143
+      }
+    ],
+    "制限値を環境変数 `RATE_LIMIT_PER_MINUTE` から取得する（デフォルト10）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644167
+      }
+    ],
+    "制限期間を1分に設定する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644194
+      }
+    ],
+    "超過時に429ステータスコードを返す設定を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644219
+      }
+    ],
+    "JSON形式のエラーレスポンスを返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644242
+      }
+    ],
+    "エラーコード `rate_limit_exceeded` とメッセージを含める": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644268
+      }
+    ],
+    "`ActiveRecord::RecordNotFound` を rescue して404を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644294
+      }
+    ],
+    "`ActionController::ParameterMissing` を rescue して400を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644320
+      }
+    ],
+    "予期しない例外を rescue して500を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644343
+      }
+    ],
+    "全エラーレスポンスを統一JSON形式（error.code, error.message）にする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644368
+      }
+    ],
+    "リクエスト/レスポンスのログ出力を確認する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644392
+      }
+    ],
+    "エラー発生時のスタックトレースをログに出力する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644419
+      }
+    ],
+    "外部API呼び出しのログ出力を実装する（Bedrock、Webページ取得）": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644444
+      }
+    ],
+    "ログレベルを環境変数 `RAILS_LOG_LEVEL` で制御する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644469
+      }
+    ],
+    "`GET /health` エンドポイントを実装する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644494
+      }
+    ],
+    "ステータス200と `{\"status\":\"ok\"}` を返す": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644518
+      }
+    ],
+    "認証をスキップする設定を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644541
+      }
+    ],
+    "レートリミットの対象外にする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644568
+      }
+    ],
+    "`test/models/bookmark_test.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644596
+      }
+    ],
+    "バリデーションのテスト（presence, uniqueness, format）を記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644627
+      }
+    ],
+    "URL正規化のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644652
+      }
+    ],
+    "検索スコープのテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644705
+      }
+    ],
+    "フィクスチャ（`test/fixtures/bookmarks.yml`）を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644731
+      }
+    ],
+    "`test/services/web_fetcher_service_test.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644756
+      }
+    ],
+    "WebMock を使用してHTTPリクエストをスタブする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644779
+      }
+    ],
+    "正常系（ページ取得成功）のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644807
+      }
+    ],
+    "リダイレクト追従のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644831
+      }
+    ],
+    "タイムアウト時のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644853
+      }
+    ],
+    "SSRF防止のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644878
+      }
+    ],
+    "HTML解析（タイトル抽出、本文抽出）のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644906
+      }
+    ],
+    "`test/services/summarizer_service_test.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644931
+      }
+    ],
+    "Bedrock API呼び出しをモック/スタブする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644959
+      }
+    ],
+    "正常系（要約取得成功）のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431644986
+      }
+    ],
+    "エラー系（API失敗で nil を返す）のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645011
+      }
+    ],
+    "テキスト切り詰め処理のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645038
+      }
+    ],
+    "`test/services/bookmark_creator_service_test.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645067
+      }
+    ],
+    "WebFetcherService と SummarizerService をスタブする": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645094
+      }
+    ],
+    "正常系（全処理成功）のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645121
+      }
+    ],
+    "URL不正時のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645151
+      }
+    ],
+    "URL重複時のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645176
+      }
+    ],
+    "ページ取得失敗時（タイトル・要約が空で登録）のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645202
+      }
+    ],
+    "要約生成失敗時（要約が空で登録）のテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645228
+      }
+    ],
+    "`test/controllers/api/v1/bookmarks_controller_test.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645253
+      }
+    ],
+    "認証のテスト（正常認証、認証なし、不正キー）を記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645276
+      }
+    ],
+    "POST /api/v1/bookmarks のテスト（正常系、エラー系）を記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645305
+      }
+    ],
+    "GET /api/v1/bookmarks のテスト（一覧取得、ページネーション）を記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645359
+      }
+    ],
+    "GET /api/v1/bookmarks/:id のテスト（正常系、404）を記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645386
+      }
+    ],
+    "DELETE /api/v1/bookmarks/:id のテスト（正常系、404）を記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645409
+      }
+    ],
+    "GET /api/v1/bookmarks/search のテスト（正常系、結果なし）を記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645436
+      }
+    ],
+    "`test/integration/health_test.rb` を作成する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645464
+      }
+    ],
+    "200レスポンスのテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645490
+      }
+    ],
+    "認証不要であることのテストを記述する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645519
+      }
+    ],
+    "`.rubocop.yml` を作成し、プロジェクトに合った設定を行う": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645541
+      }
+    ],
+    "`bundle exec rubocop` を実行して警告を確認する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645569
+      }
+    ],
+    "重大な警告を修正する": [
+      {
+        "executionId": "5a5b9a2e-c52f-4308-b567-8c97cd970795",
+        "chatSessionId": "sess_39c0e92a-972c-4e14-a58a-91089c5046d7",
+        "timestamp": 1783431645597
+      }
+    ]
+  }
+}

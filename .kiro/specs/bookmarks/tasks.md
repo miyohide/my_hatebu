@@ -4,9 +4,9 @@
 
 ### 1.1 Railsプロジェクトの作成
 
-- [ ] `rails new my_hatebu --api` でプロジェクトを生成する（デフォルトでsqlite3を使用）
-- [ ] Ruby 4.0.5 を `.ruby-version` に指定する
-- [ ] 不要なデフォルトファイル（mailer、job等）を削除する
+- [x] `rails new my_hatebu --api` でプロジェクトを生成する（デフォルトでsqlite3を使用）
+- [x] Ruby 4.0.5 を `.ruby-version` に指定する
+- [x] 不要なデフォルトファイル（mailer、job等）を削除する
 
 **受け入れ基準:**
 - `rails -v` で Rails 8.1.x が表示される
@@ -14,16 +14,16 @@
 
 ### 1.2 Gemfileの整備
 
-- [ ] `sqlite3`、`puma` の確認
-- [ ] `pg` を production グループに追加する
-- [ ] `aws-sdk-bedrockruntime` を追加する
-- [ ] `nokogiri` を追加する
-- [ ] `kaminari` を追加する
-- [ ] `rack-attack` を追加する
-- [ ] `dotenv-rails` を development/test グループに追加する
-- [ ] `webmock` を development/test グループに追加する
-- [ ] `rubocop`、`rubocop-rails`、`rubocop-minitest` を development/test グループに追加する
-- [ ] `bundle install` が成功する
+- [x] `sqlite3`、`puma` の確認
+- [x] `pg` を production グループに追加する
+- [x] `aws-sdk-bedrockruntime` を追加する
+- [x] `nokogiri` を追加する
+- [x] `kaminari` を追加する
+- [x] `rack-attack` を追加する
+- [x] `dotenv-rails` を development/test グループに追加する
+- [x] `webmock` を development/test グループに追加する
+- [x] `rubocop`、`rubocop-rails`、`rubocop-minitest` を development/test グループに追加する
+- [x] `bundle install` が成功する
 
 **受け入れ基準:**
 - `bundle install` がエラーなく完了する
