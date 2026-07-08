@@ -88,11 +88,11 @@
 
 ### 3.1 モデルファイルの作成
 
-- [ ] `app/models/bookmark.rb` を作成する
-- [ ] `url` の presence バリデーションを追加する
-- [ ] `url` の uniqueness バリデーションを追加する
-- [ ] `url` の format バリデーション（HTTP/HTTPS のみ許可）を追加する
-- [ ] `before_validation` でURL正規化処理を実装する（末尾スラッシュ除去、フラグメント除去）
+- [x] `app/models/bookmark.rb` を作成する
+- [x] `url` の presence バリデーションを追加する
+- [x] `url` の uniqueness バリデーションを追加する
+- [x] `url` の format バリデーション（HTTP/HTTPS のみ許可）を追加する
+- [x] `before_validation` でURL正規化処理を実装する（末尾スラッシュ除去、フラグメント除去）
 
 **受け入れ基準:**
 - 有効なURLでブックマークを作成できる
@@ -103,9 +103,9 @@
 
 ### 3.2 検索スコープの実装
 
-- [ ] `search` スコープを定義する（LIKE による部分一致検索）
-- [ ] タイトルと要約の両方を検索対象とする
-- [ ] `sanitize_sql_like` でSQLインジェクション対策を行う
+- [x] `search` スコープを定義する（LIKE による部分一致検索）
+- [x] タイトルと要約の両方を検索対象とする
+- [x] `sanitize_sql_like` でSQLインジェクション対策を行う
 
 **受け入れ基準:**
 - キーワードでタイトルを検索できる
