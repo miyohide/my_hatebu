@@ -1,0 +1,20 @@
+one:
+  url: "https://example.com/article-one"
+  title: "サンプル記事1"
+  summary: "これはサンプル記事1の要約です。テスト用のデータとして使用します。"
+  created_at: <%= 2.days.ago %>
+  updated_at: <%= 2.days.ago %>
+
+two:
+  url: "https://example.com/article-two"
+  title: "サンプル記事2"
+  summary: "これはサンプル記事2の要約です。検索テストにも使用します。"
+  created_at: <%= 1.day.ago %>
+  updated_at: <%= 1.day.ago %>
+
+no_summary:
+  url: "https://example.com/no-summary"
+  title: "要約なしの記事"
+  summary: ""
+  created_at: <%= 3.days.ago %>
+  updated_at: <%= 3.days.ago %>
