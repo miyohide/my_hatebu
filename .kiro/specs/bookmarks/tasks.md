@@ -272,11 +272,11 @@
 
 ### 7.1 認証Concernの作成
 
-- [ ] `app/controllers/concerns/api_key_authenticatable.rb` を作成する
-- [ ] `X-API-Key` ヘッダーからAPIキーを取得する処理を実装する
-- [ ] 環境変数 `API_KEY` との照合処理を実装する
-- [ ] `ActiveSupport::SecurityUtils.secure_compare` でタイミング攻撃対策を行う
-- [ ] 認証失敗時に401 Unauthorized を返す
+- [x] `app/controllers/concerns/api_key_authenticatable.rb` を作成する
+- [x] `X-API-Key` ヘッダーからAPIキーを取得する処理を実装する
+- [x] 環境変数 `API_KEY` との照合処理を実装する
+- [x] `ActiveSupport::SecurityUtils.secure_compare` でタイミング攻撃対策を行う
+- [x] 認証失敗時に401 Unauthorized を返す
 
 **受け入れ基準:**
 - 正しいAPIキーでリクエストが通る
@@ -286,8 +286,8 @@
 
 ### 7.2 ApplicationController への適用
 
-- [ ] `ApplicationController` に認証Concernを include する
-- [ ] ヘルスチェックエンドポイントは認証をスキップする設定を行う
+- [x] `ApplicationController` に認証Concernを include する
+- [x] ヘルスチェックエンドポイントは認証をスキップする設定を行う
 
 **受け入れ基準:**
 - `/api/v1/bookmarks` へのリクエストに認証が必要である
