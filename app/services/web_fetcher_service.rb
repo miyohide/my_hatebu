@@ -33,11 +33,19 @@ class WebFetcherService
   end
 
   def call
-    response_body = fetch_with_retry(@url)
-    return response_body if response_body.is_a?(Result) && !response_body.success?
+    Rails.logger.info("WebFetcherService: Fetching URL: #{@url}")
 
-    parse_html(response_body)
+    response_body = fetch_with_retry(@url)
+    if response_body.is_a?(Result) && !response_body.success?
+      Rails.logger.warn("WebFetcherService: Failed to fetch #{@url} - #{response_body.error}")
+      return response_body
+    end
+
+    result = parse_html(response_body)
+    Rails.logger.info("WebFetcherService: Successfully fetched #{@url} (title: #{result.title&.truncate(50)})")
+    result
   rescue StandardError => e
+    Rails.logger.error("WebFetcherService: Unexpected error fetching #{@url} - #{e.class}: #{e.message}")
     Result.new(success: false, title: nil, body_text: nil, error: e.message)
   end
 

@@ -10,6 +10,9 @@ class SummarizerService
   def call
     return nil if @text.blank?
 
+    model_id = ENV.fetch("BEDROCK_MODEL_ID", "anthropic.claude-3-haiku-20240307-v1:0")
+    Rails.logger.info("SummarizerService: Calling Bedrock API (model: #{model_id}, input length: #{@text.length})")
+
     client = Aws::BedrockRuntime::Client.new(
       region: ENV.fetch("AWS_REGION", "us-east-1"),
       retry_limit: 3,
@@ -17,7 +20,7 @@ class SummarizerService
     )
 
     response = client.converse(
-      model_id: ENV.fetch("BEDROCK_MODEL_ID", "anthropic.claude-3-haiku-20240307-v1:0"),
+      model_id: model_id,
       messages: [
         {
           role: "user",
@@ -30,9 +33,11 @@ class SummarizerService
       }
     )
 
-    response.output.message.content[0].text
+    summary = response.output.message.content[0].text
+    Rails.logger.info("SummarizerService: Successfully generated summary (#{summary.length} chars)")
+    summary
   rescue Aws::BedrockRuntime::Errors::ServiceError => e
-    Rails.logger.error("Bedrock API error: #{e.class} - #{e.message}")
+    Rails.logger.error("SummarizerService: Bedrock API error - #{e.class}: #{e.message}")
     nil
   end
 

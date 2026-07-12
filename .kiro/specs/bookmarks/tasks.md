@@ -415,10 +415,10 @@
 
 ### 10.1 ApplicationController のエラーハンドリング
 
-- [ ] `ActiveRecord::RecordNotFound` を rescue して404を返す
-- [ ] `ActionController::ParameterMissing` を rescue して400を返す
-- [ ] 予期しない例外を rescue して500を返す
-- [ ] 全エラーレスポンスを統一JSON形式（error.code, error.message）にする
+- [x] `ActiveRecord::RecordNotFound` を rescue して404を返す
+- [x] `ActionController::ParameterMissing` を rescue して400を返す
+- [x] 予期しない例外を rescue して500を返す
+- [x] 全エラーレスポンスを統一JSON形式（error.code, error.message）にする
 
 **受け入れ基準:**
 - 存在しないリソースへのアクセスで統一形式の404エラーが返る
@@ -428,10 +428,10 @@
 
 ### 10.2 ログ出力の設定
 
-- [ ] リクエスト/レスポンスのログ出力を確認する
-- [ ] エラー発生時のスタックトレースをログに出力する
-- [ ] 外部API呼び出しのログ出力を実装する（Bedrock、Webページ取得）
-- [ ] ログレベルを環境変数 `RAILS_LOG_LEVEL` で制御する
+- [x] リクエスト/レスポンスのログ出力を確認する
+- [x] エラー発生時のスタックトレースをログに出力する
+- [x] 外部API呼び出しのログ出力を実装する（Bedrock、Webページ取得）
+- [x] ログレベルを環境変数 `RAILS_LOG_LEVEL` で制御する
 
 **受け入れ基準:**
 - リクエストの情報がログに記録される
