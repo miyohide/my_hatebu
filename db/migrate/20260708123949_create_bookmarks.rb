@@ -2,8 +2,8 @@ class CreateBookmarks < ActiveRecord::Migration[8.1]
   def change
     create_table :bookmarks do |t|
       t.text :url, null: false
-      t.text :title, default: ""
-      t.text :summary, default: ""
+      t.text :title, default: ''
+      t.text :summary, default: ''
       t.timestamps
     end
 

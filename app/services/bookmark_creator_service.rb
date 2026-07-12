@@ -11,32 +11,26 @@ class BookmarkCreatorService
 
   def call
     # 1. URL形式バリデーション
-    unless valid_url?
-      return Result.new(success: false, bookmark: nil, error: "URLが無効です", status: :unprocessable_entity)
-    end
+    return Result.new(success: false, bookmark: nil, error: 'URLが無効です', status: :unprocessable_entity) unless valid_url?
 
     # 2. URL正規化
     normalized = normalize_url(@url)
 
     # 3. 重複チェック
-    if Bookmark.exists?(url: normalized)
-      return Result.new(success: false, bookmark: nil, error: "このURLは既に登録されています", status: :conflict)
-    end
+    return Result.new(success: false, bookmark: nil, error: 'このURLは既に登録されています', status: :conflict) if Bookmark.exists?(url: normalized)
 
     # 4. Webページ取得
     fetch_result = WebFetcherService.new(normalized).call
 
     # 5. AI要約生成（ページ取得成功時のみ）
     summary = nil
-    if fetch_result.success?
-      summary = SummarizerService.new(fetch_result.body_text).call
-    end
+    summary = SummarizerService.new(fetch_result.body_text).call if fetch_result.success?
 
     # 6. データベース保存
     bookmark = Bookmark.create!(
       url: normalized,
-      title: fetch_result.success? ? (fetch_result.title || "") : "",
-      summary: summary || ""
+      title: fetch_result.success? ? (fetch_result.title || '') : '',
+      summary: summary || ''
     )
 
     Result.new(success: true, bookmark: bookmark, error: nil, status: :created)
@@ -56,7 +50,7 @@ class BookmarkCreatorService
   def normalize_url(url)
     uri = URI.parse(url)
     uri.fragment = nil
-    uri.to_s.chomp("/")
+    uri.to_s.chomp('/')
   rescue URI::InvalidURIError
     url
   end

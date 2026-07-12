@@ -10,11 +10,11 @@ class SummarizerService
   def call
     return nil if @text.blank?
 
-    model_id = ENV.fetch("BEDROCK_MODEL_ID", "anthropic.claude-3-haiku-20240307-v1:0")
+    model_id = ENV.fetch('BEDROCK_MODEL_ID', 'anthropic.claude-3-haiku-20240307-v1:0')
     Rails.logger.info("SummarizerService: Calling Bedrock API (model: #{model_id}, input length: #{@text.length})")
 
     client = Aws::BedrockRuntime::Client.new(
-      region: ENV.fetch("AWS_REGION", "us-east-1"),
+      region: ENV.fetch('AWS_REGION', 'us-east-1'),
       retry_limit: 3,
       retry_backoff: ->(context) { sleep(2**context.retries) }
     )
@@ -23,7 +23,7 @@ class SummarizerService
       model_id: model_id,
       messages: [
         {
-          role: "user",
+          role: 'user',
           content: [{ text: prompt }]
         }
       ],

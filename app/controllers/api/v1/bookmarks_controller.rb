@@ -3,17 +3,6 @@
 module Api
   module V1
     class BookmarksController < ApplicationController
-      # POST /api/v1/bookmarks
-      def create
-        result = BookmarkCreatorService.new(params[:url]).call
-
-        if result.success?
-          render json: bookmark_json(result.bookmark), status: :created
-        else
-          render json: { error: { code: error_code(result.status), message: result.error } }, status: result.status
-        end
-      end
-
       # GET /api/v1/bookmarks
       def index
         bookmarks = Bookmark.order(created_at: :desc)
@@ -28,13 +17,24 @@ module Api
 
       # GET /api/v1/bookmarks/:id
       def show
-        bookmark = Bookmark.find(params[:id])
+        bookmark = Bookmark.find(params.expect(:id))
         render json: bookmark_json(bookmark)
+      end
+
+      # POST /api/v1/bookmarks
+      def create
+        result = BookmarkCreatorService.new(params[:url]).call
+
+        if result.success?
+          render json: bookmark_json(result.bookmark), status: :created
+        else
+          render json: { error: { code: error_code(result.status), message: result.error } }, status: result.status
+        end
       end
 
       # DELETE /api/v1/bookmarks/:id
       def destroy
-        bookmark = Bookmark.find(params[:id])
+        bookmark = Bookmark.find(params.expect(:id))
         bookmark.destroy!
         head :no_content
       end
@@ -76,9 +76,9 @@ module Api
 
       def error_code(status)
         case status
-        when :unprocessable_entity then "invalid_url"
-        when :conflict then "duplicate_url"
-        else "error"
+        when :unprocessable_entity then 'invalid_url'
+        when :conflict then 'duplicate_url'
+        else 'error'
         end
       end
     end

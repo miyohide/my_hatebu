@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "net/http"
-require "uri"
-require "resolv"
-require "ipaddr"
-require "nokogiri"
+require 'net/http'
+require 'uri'
+require 'resolv'
+require 'ipaddr'
+require 'nokogiri'
 
 class WebFetcherService
   Result = Struct.new(:success, :title, :body_text, :error, keyword_init: true) do
@@ -15,17 +15,17 @@ class WebFetcherService
   MAX_RETRIES = 2
   CONNECT_TIMEOUT = 10
   READ_TIMEOUT = 10
-  USER_AGENT = "MyHatebuBot/1.0"
+  USER_AGENT = 'MyHatebuBot/1.0'
   MAX_BODY_LENGTH = 10_000
 
   BLOCKED_RANGES = [
-    IPAddr.new("10.0.0.0/8"),
-    IPAddr.new("172.16.0.0/12"),
-    IPAddr.new("192.168.0.0/16"),
-    IPAddr.new("127.0.0.0/8"),
-    IPAddr.new("169.254.0.0/16"),
-    IPAddr.new("0.0.0.0/8"),
-    IPAddr.new("::1/128")
+    IPAddr.new('10.0.0.0/8'),
+    IPAddr.new('172.16.0.0/12'),
+    IPAddr.new('192.168.0.0/16'),
+    IPAddr.new('127.0.0.0/8'),
+    IPAddr.new('169.254.0.0/16'),
+    IPAddr.new('0.0.0.0/8'),
+    IPAddr.new('::1/128')
   ].freeze
 
   def initialize(url)
@@ -70,7 +70,7 @@ class WebFetcherService
   end
 
   def fetch_page(url, redirect_count: 0)
-    raise "Too many redirects" if redirect_count > MAX_REDIRECTS
+    raise 'Too many redirects' if redirect_count > MAX_REDIRECTS
 
     uri = URI.parse(url)
     validate_url!(uri)
@@ -79,9 +79,9 @@ class WebFetcherService
 
     case response
     when Net::HTTPRedirection
-      location = response["location"]
+      location = response['location']
       # Handle relative redirects
-      location = URI.join(uri, location).to_s unless location.start_with?("http")
+      location = URI.join(uri, location).to_s unless location.start_with?('http')
       fetch_page(location, redirect_count: redirect_count + 1)
     when Net::HTTPSuccess
       response.body
@@ -100,13 +100,13 @@ class WebFetcherService
     validate_ip!(ip_address)
 
     http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = (uri.scheme == "https")
+    http.use_ssl = (uri.scheme == 'https')
     http.open_timeout = CONNECT_TIMEOUT
     http.read_timeout = READ_TIMEOUT
     http.ipaddr = ip_address
 
     request = Net::HTTP::Get.new(uri)
-    request["User-Agent"] = USER_AGENT
+    request['User-Agent'] = USER_AGENT
 
     http.request(request)
   end
@@ -118,16 +118,16 @@ class WebFetcherService
   end
 
   def validate_url!(uri)
-    raise "Invalid URL scheme" unless %w[http https].include?(uri.scheme)
-    raise "Missing host" if uri.host.nil? || uri.host.empty?
+    raise 'Invalid URL scheme' unless %w[http https].include?(uri.scheme)
+    raise 'Missing host' if uri.host.blank?
   end
 
   def validate_ip!(ip)
     addr = IPAddr.new(ip)
 
-    if BLOCKED_RANGES.any? { |range| range.include?(addr) }
-      raise "Access to private/internal network is blocked: #{ip}"
-    end
+    return unless BLOCKED_RANGES.any? { |range| range.include?(addr) }
+
+    raise "Access to private/internal network is blocked: #{ip}"
   end
 
   def parse_html(html_body)
@@ -140,26 +140,26 @@ class WebFetcherService
 
   def extract_title(doc)
     # Prefer og:title
-    og_title = doc.at('meta[property="og:title"]')&.attr("content")
+    og_title = doc.at('meta[property="og:title"]')&.attr('content')
     return og_title.strip if og_title && !og_title.strip.empty?
 
     # Fallback to <title> tag
-    title_tag = doc.at("title")&.text
+    title_tag = doc.at('title')&.text
     title_tag&.strip
   end
 
   def extract_body_text(doc)
     # Remove unwanted elements
-    doc.css("script, style, nav, header, footer, noscript, iframe").remove
+    doc.css('script, style, nav, header, footer, noscript, iframe').remove
 
     # Get text content
-    text = doc.at("body")&.text || ""
+    text = doc.at('body')&.text || ''
 
     # Normalize whitespace
-    text = text.gsub(/[[:space:]]+/, " ").strip
+    text = text.gsub(/[[:space:]]+/, ' ').strip
 
     # Limit to MAX_BODY_LENGTH characters
-    text[0, MAX_BODY_LENGTH] || ""
+    text[0, MAX_BODY_LENGTH] || ''
   end
 
   # Custom error class for 5xx server errors to enable retry logic

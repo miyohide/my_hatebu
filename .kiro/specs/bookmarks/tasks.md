@@ -461,11 +461,11 @@
 
 ### 12.1 モデルテスト
 
-- [ ] `test/models/bookmark_test.rb` を作成する
-- [ ] バリデーションのテスト（presence, uniqueness, format）を記述する
-- [ ] URL正規化のテストを記述する
-- [ ] 検索スコープのテストを記述する
-- [ ] フィクスチャ（`test/fixtures/bookmarks.yml`）を作成する
+- [x] `test/models/bookmark_test.rb` を作成する
+- [x] バリデーションのテスト（presence, uniqueness, format）を記述する
+- [x] URL正規化のテストを記述する
+- [x] 検索スコープのテストを記述する
+- [x] フィクスチャ（`test/fixtures/bookmarks.yml`）を作成する
 
 **受け入れ基準:**
 - 全バリデーションがテストされている
@@ -475,13 +475,13 @@
 
 ### 12.2 WebFetcherService テスト
 
-- [ ] `test/services/web_fetcher_service_test.rb` を作成する
-- [ ] WebMock を使用してHTTPリクエストをスタブする
-- [ ] 正常系（ページ取得成功）のテストを記述する
-- [ ] リダイレクト追従のテストを記述する
-- [ ] タイムアウト時のテストを記述する
-- [ ] SSRF防止のテストを記述する
-- [ ] HTML解析（タイトル抽出、本文抽出）のテストを記述する
+- [x] `test/services/web_fetcher_service_test.rb` を作成する
+- [x] WebMock を使用してHTTPリクエストをスタブする
+- [x] 正常系（ページ取得成功）のテストを記述する
+- [x] リダイレクト追従のテストを記述する
+- [x] タイムアウト時のテストを記述する
+- [x] SSRF防止のテストを記述する
+- [x] HTML解析（タイトル抽出、本文抽出）のテストを記述する
 
 **受け入れ基準:**
 - 外部通信なしでテストが実行できる（WebMock使用）
@@ -490,11 +490,11 @@
 
 ### 12.3 SummarizerService テスト
 
-- [ ] `test/services/summarizer_service_test.rb` を作成する
-- [ ] Bedrock API呼び出しをモック/スタブする
-- [ ] 正常系（要約取得成功）のテストを記述する
-- [ ] エラー系（API失敗で nil を返す）のテストを記述する
-- [ ] テキスト切り詰め処理のテストを記述する
+- [x] `test/services/summarizer_service_test.rb` を作成する
+- [x] Bedrock API呼び出しをモック/スタブする
+- [x] 正常系（要約取得成功）のテストを記述する
+- [x] エラー系（API失敗で nil を返す）のテストを記述する
+- [x] テキスト切り詰め処理のテストを記述する
 
 **受け入れ基準:**
 - Bedrock APIへの実際の通信なしでテストが実行できる
@@ -503,13 +503,13 @@
 
 ### 12.4 BookmarkCreatorService テスト
 
-- [ ] `test/services/bookmark_creator_service_test.rb` を作成する
-- [ ] WebFetcherService と SummarizerService をスタブする
-- [ ] 正常系（全処理成功）のテストを記述する
-- [ ] URL不正時のテストを記述する
-- [ ] URL重複時のテストを記述する
-- [ ] ページ取得失敗時（タイトル・要約が空で登録）のテストを記述する
-- [ ] 要約生成失敗時（要約が空で登録）のテストを記述する
+- [x] `test/services/bookmark_creator_service_test.rb` を作成する
+- [x] WebFetcherService と SummarizerService をスタブする
+- [x] 正常系（全処理成功）のテストを記述する
+- [x] URL不正時のテストを記述する
+- [x] URL重複時のテストを記述する
+- [x] ページ取得失敗時（タイトル・要約が空で登録）のテストを記述する
+- [x] 要約生成失敗時（要約が空で登録）のテストを記述する
 
 **受け入れ基準:**
 - オーケストレーション処理の全パターンがテストされている
@@ -518,13 +518,13 @@
 
 ### 12.5 コントローラテスト（BookmarksController）
 
-- [ ] `test/controllers/api/v1/bookmarks_controller_test.rb` を作成する
-- [ ] 認証のテスト（正常認証、認証なし、不正キー）を記述する
-- [ ] POST /api/v1/bookmarks のテスト（正常系、エラー系）を記述する
-- [ ] GET /api/v1/bookmarks のテスト（一覧取得、ページネーション）を記述する
-- [ ] GET /api/v1/bookmarks/:id のテスト（正常系、404）を記述する
-- [ ] DELETE /api/v1/bookmarks/:id のテスト（正常系、404）を記述する
-- [ ] GET /api/v1/bookmarks/search のテスト（正常系、結果なし）を記述する
+- [x] `test/controllers/api/v1/bookmarks_controller_test.rb` を作成する
+- [x] 認証のテスト（正常認証、認証なし、不正キー）を記述する
+- [x] POST /api/v1/bookmarks のテスト（正常系、エラー系）を記述する
+- [x] GET /api/v1/bookmarks のテスト（一覧取得、ページネーション）を記述する
+- [x] GET /api/v1/bookmarks/:id のテスト（正常系、404）を記述する
+- [x] DELETE /api/v1/bookmarks/:id のテスト（正常系、404）を記述する
+- [x] GET /api/v1/bookmarks/search のテスト（正常系、結果なし）を記述する
 
 **受け入れ基準:**
 - 全エンドポイントの正常系・異常系がテストされている
@@ -534,9 +534,9 @@
 
 ### 12.6 ヘルスチェックのテスト
 
-- [ ] `test/integration/health_test.rb` を作成する
-- [ ] 200レスポンスのテストを記述する
-- [ ] 認証不要であることのテストを記述する
+- [x] `test/integration/health_test.rb` を作成する
+- [x] 200レスポンスのテストを記述する
+- [x] 認証不要であることのテストを記述する
 
 **受け入れ基準:**
 - ヘルスチェックが認証なしで200を返すことがテストされている
@@ -544,9 +544,9 @@
 
 ### 12.7 RuboCop の設定と実行
 
-- [ ] `.rubocop.yml` を作成し、プロジェクトに合った設定を行う
-- [ ] `bundle exec rubocop` を実行して警告を確認する
-- [ ] 重大な警告を修正する
+- [x] `.rubocop.yml` を作成し、プロジェクトに合った設定を行う
+- [x] `bundle exec rubocop` を実行して警告を確認する
+- [x] 重大な警告を修正する
 
 **受け入れ基準:**
 - RuboCop がエラーなく実行できる

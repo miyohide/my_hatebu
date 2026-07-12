@@ -1,8 +1,83 @@
-# Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+require:
+  - rubocop-rails
+  - rubocop-minitest
 
-# Overwrite or add rules to create your own house style
-#
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+AllCops:
+  TargetRubyVersion: 4.0
+  NewCops: enable
+  Exclude:
+    - "db/schema.rb"
+    - "db/**/*_schema.rb"
+    - "bin/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+
+# Allow longer lines in tests
+Layout/LineLength:
+  Max: 150
+  Exclude:
+    - "test/**/*"
+
+# Rails API mode doesn't use ApplicationRecord in the same way
+Rails/ApplicationController:
+  Enabled: false
+
+# Allow more flexible method length for services
+Metrics/MethodLength:
+  Max: 25
+  Exclude:
+    - "test/**/*"
+
+# Allow more flexible class length
+Metrics/ClassLength:
+  Max: 150
+
+# Allow more flexible block length in tests
+Metrics/BlockLength:
+  Exclude:
+    - "test/**/*"
+    - "config/**/*"
+
+# Allow shadowed exceptions in retry logic
+Lint/ShadowedException:
+  Enabled: false
+
+# Allow duplicate branches in case statements for clarity
+Lint/DuplicateBranch:
+  Enabled: false
+
+# Allow more assertions per test for thorough testing
+Minitest/MultipleAssertions:
+  Max: 8
+
+# Allow AbcSize for service objects with orchestration logic
+Metrics/AbcSize:
+  Max: 30
+
+# Allow cyclomatic complexity for service objects
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+# Rails I18n locale texts not required for validation messages
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+# Allow OpenStruct in tests for mocking
+Style/OpenStructUse:
+  Exclude:
+    - "test/**/*"
+
+# Allow method naming that matches Rails conventions
+Naming/PredicateName:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+  Exclude:
+    - "db/migrate/**/*"
+    - "config/**/*"
+    - "Gemfile"
+    - "Rakefile"

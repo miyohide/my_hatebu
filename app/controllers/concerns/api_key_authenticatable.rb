@@ -10,12 +10,12 @@ module ApiKeyAuthenticatable
   private
 
   def authenticate_api_key!
-    api_key = request.headers["X-API-Key"]
-    expected_key = ENV["API_KEY"]
+    api_key = request.headers['X-API-Key']
+    expected_key = ENV.fetch('API_KEY', nil)
 
     unless api_key.present? && expected_key.present? &&
            ActiveSupport::SecurityUtils.secure_compare(api_key, expected_key)
-      render json: { error: { code: "unauthorized", message: "認証に失敗しました" } }, status: :unauthorized
+      render json: { error: { code: 'unauthorized', message: '認証に失敗しました' } }, status: :unauthorized
     end
   end
 end
