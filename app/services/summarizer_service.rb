@@ -10,7 +10,7 @@ class SummarizerService
   def call
     return nil if @text.blank?
 
-    model_id = ENV.fetch('BEDROCK_MODEL_ID', 'anthropic.claude-3-haiku-20240307-v1:0')
+    model_id = ENV.fetch('BEDROCK_MODEL_ID', 'google.gemma-3-27b-it')
     Rails.logger.info("SummarizerService: Calling Bedrock API (model: #{model_id}, input length: #{@text.length})")
 
     client = Aws::BedrockRuntime::Client.new(
