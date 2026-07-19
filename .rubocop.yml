@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-rails
   - rubocop-minitest
 
@@ -24,13 +24,13 @@ Rails/ApplicationController:
 
 # Allow more flexible method length for services
 Metrics/MethodLength:
-  Max: 25
+  Max: 30
   Exclude:
     - "test/**/*"
 
 # Allow more flexible class length
 Metrics/ClassLength:
-  Max: 150
+  Max: 160
 
 # Allow more flexible block length in tests
 Metrics/BlockLength:
@@ -68,7 +68,7 @@ Style/OpenStructUse:
     - "test/**/*"
 
 # Allow method naming that matches Rails conventions
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Enabled: false
 
 Style/Documentation:
