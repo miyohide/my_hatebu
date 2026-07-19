@@ -51,7 +51,7 @@ group :development, :test do
   gem 'mocha', '~> 2.1'
 
   # Ruby linting and style
-  gem 'rubocop', '~> 1.60', require: false
+  gem 'rubocop', '~> 1.88', require: false
   gem 'rubocop-minitest', '~> 0.36', require: false
   gem 'rubocop-rails', '~> 2.23', require: false
 end
