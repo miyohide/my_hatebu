@@ -53,7 +53,7 @@ group :development, :test do
   # Ruby linting and style
   gem 'rubocop', '~> 1.60', require: false
   gem 'rubocop-minitest', '~> 0.36', require: false
-  gem 'rubocop-rails', '~> 2.23', require: false
+  gem 'rubocop-rails', '~> 2.36', require: false
 end
 
 group :production do
