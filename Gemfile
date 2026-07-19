@@ -8,7 +8,7 @@ gem 'sqlite3', '>= 2.1'
 gem 'puma', '>= 5.0'
 
 # AWS Bedrock Runtime for AI summarization
-gem 'aws-sdk-bedrockruntime', '~> 1.0'
+gem 'aws-sdk-bedrockruntime', '~> 1.82'
 # HTML parsing for web page content extraction
 gem 'nokogiri', '~> 1.16'
 # Pagination
