@@ -5,7 +5,7 @@ class Bookmark < ApplicationRecord
 
   validates :url, presence: true,
                   uniqueness: true,
-                  format: { with: %r{\Ahttps?://.+}i, message: 'はHTTPまたはHTTPS形式である必要があります' }
+                  format: { with: %r{\Ahttps?://.+\z}i, message: 'はHTTPまたはHTTPS形式である必要があります' }
 
   scope :search, lambda { |query|
     return none if query.blank?
