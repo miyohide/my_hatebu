@@ -48,7 +48,7 @@ group :development, :test do
   gem 'webmock', '~> 3.19'
 
   # Mocking and stubbing
-  gem 'mocha', '~> 2.1'
+  gem 'mocha', '~> 3.1'
 
   # Ruby linting and style
   gem 'rubocop', '~> 1.60', require: false
