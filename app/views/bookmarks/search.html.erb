@@ -1,0 +1,22 @@
+<% content_for(:title) { "検索結果: #{@query} - My Hatebu" } %>
+
+<%= render "search_form" %>
+
+<p style="margin-bottom: 1rem; font-size: 0.875rem; color: var(--color-text-muted);">
+  「<%= @query %>」の検索結果: <%= @bookmarks.total_count %>件
+</p>
+
+<% if @bookmarks.any? %>
+  <% @bookmarks.each do |bookmark| %>
+    <%= render "bookmark", bookmark: bookmark %>
+  <% end %>
+
+  <div class="pagination">
+    <%= paginate @bookmarks, params: { q: @query } %>
+  </div>
+<% else %>
+  <div class="empty-state">
+    <p>該当するブックマークが見つからなかった</p>
+    <%= link_to "一覧に戻る", bookmarks_path, class: "btn btn-outline" %>
+  </div>
+<% end %>

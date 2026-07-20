@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for(:title) || "My Hatebu" %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1><%= link_to "My Hatebu", bookmarks_path %></h1>
+      <nav>
+        <%= link_to "新規登録", new_bookmark_path, class: "btn btn-primary" %>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <% if flash[:notice] %>
+      <div class="flash flash-notice"><%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="flash flash-alert"><%= flash[:alert] %></div>
+    <% end %>
+
+    <%= yield %>
+  </main>
+</body>
+</html>

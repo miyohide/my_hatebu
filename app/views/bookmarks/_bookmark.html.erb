@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-title">
+    <%= link_to (bookmark.title.presence || "タイトルなし"), bookmark_path(bookmark) %>
+  </div>
+  <div class="card-url"><%= bookmark.url %></div>
+  <% if bookmark.summary.present? %>
+    <div class="card-summary"><%= truncate(bookmark.summary, length: 150) %></div>
+  <% end %>
+  <div class="card-meta">
+    <span><%= bookmark.created_at.strftime("%Y/%m/%d %H:%M") %></span>
+  </div>
+</div>

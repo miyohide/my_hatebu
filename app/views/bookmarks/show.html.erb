@@ -1,0 +1,26 @@
+<% content_for(:title) { "#{@bookmark.title.presence || @bookmark.url} - My Hatebu" } %>
+
+<div class="bookmark-detail">
+  <h2><%= @bookmark.title.presence || "タイトルなし" %></h2>
+
+  <p class="url">
+    <%= link_to @bookmark.url, @bookmark.url, target: "_blank", rel: "noopener noreferrer" %>
+  </p>
+
+  <% if @bookmark.summary.present? %>
+    <div class="summary">
+      <%= simple_format(@bookmark.summary) %>
+    </div>
+  <% end %>
+
+  <div class="card-meta">
+    <span>登録日: <%= l(@bookmark.created_at, format: :long) rescue @bookmark.created_at.strftime("%Y年%m月%d日 %H:%M") %></span>
+  </div>
+
+  <div class="actions" style="margin-top: 1.5rem;">
+    <%= link_to "一覧に戻る", bookmarks_path, class: "btn btn-outline" %>
+    <%= button_to "削除", bookmark_path(@bookmark), method: :delete,
+        class: "btn btn-danger",
+        data: { turbo_confirm: "このブックマークを削除する？" } %>
+  </div>
+</div>

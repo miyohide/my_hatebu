@@ -1,0 +1,18 @@
+<% content_for(:title) { "ブックマーク一覧 - My Hatebu" } %>
+
+<%= render "search_form" %>
+
+<% if @bookmarks.any? %>
+  <% @bookmarks.each do |bookmark| %>
+    <%= render "bookmark", bookmark: bookmark %>
+  <% end %>
+
+  <div class="pagination">
+    <%= paginate @bookmarks %>
+  </div>
+<% else %>
+  <div class="empty-state">
+    <p>ブックマークがまだない</p>
+    <%= link_to "最初のブックマークを登録する", new_bookmark_path, class: "btn btn-primary" %>
+  </div>
+<% end %>

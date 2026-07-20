@@ -1,0 +1,21 @@
+<% content_for(:title) { "新規ブックマーク登録 - My Hatebu" } %>
+
+<h2 style="margin-bottom: 1.5rem;">新規ブックマーク登録</h2>
+
+<div class="card">
+  <%= form_with url: bookmarks_path, method: :post, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :url, "URL" %>
+      <%= f.url_field :url, placeholder: "https://example.com", required: true, autofocus: true %>
+    </div>
+
+    <div style="display: flex; gap: 0.75rem;">
+      <%= f.submit "登録する", class: "btn btn-primary" %>
+      <%= link_to "キャンセル", bookmarks_path, class: "btn btn-outline" %>
+    </div>
+  <% end %>
+</div>
+
+<p style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-text-muted);">
+  URLを登録すると、ページのタイトルを自動取得し、AIが内容を要約する。
+</p>
