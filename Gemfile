@@ -36,9 +36,9 @@ gem 'thruster', require: false
 
 # Frontend (ERB Web UI)
 gem 'importmap-rails'
-gem 'turbo-rails'
-gem 'stimulus-rails'
 gem 'propshaft'
+gem 'stimulus-rails'
+gem 'turbo-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

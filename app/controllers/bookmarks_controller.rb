@@ -10,12 +10,11 @@ class BookmarksController < WebController
 
   # GET /bookmarks/:id
   def show
-    @bookmark = Bookmark.find(params[:id])
+    @bookmark = Bookmark.find(params.expect(:id))
   end
 
   # GET /bookmarks/new
-  def new
-  end
+  def new; end
 
   # POST /bookmarks
   def create
@@ -25,13 +24,13 @@ class BookmarksController < WebController
       redirect_to bookmark_path(result.bookmark), notice: 'ブックマークを登録した'
     else
       flash.now[:alert] = result.error
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
   # DELETE /bookmarks/:id
   def destroy
-    bookmark = Bookmark.find(params[:id])
+    bookmark = Bookmark.find(params.expect(:id))
     bookmark.destroy!
     redirect_to bookmarks_path, notice: 'ブックマークを削除した'
   end
