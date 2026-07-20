@@ -4,7 +4,8 @@
   <h2><%= @bookmark.title.presence || "タイトルなし" %></h2>
 
   <p class="url">
-    <%= link_to @bookmark.url, @bookmark.url, target: "_blank", rel: "noopener noreferrer" %>
+    <% safe_url = URI.parse(@bookmark.url).scheme.in?(%w[http https]) ? @bookmark.url : "#" rescue "#" %>
+    <%= link_to @bookmark.url, safe_url, target: "_blank", rel: "noopener noreferrer" %>
   </p>
 
   <% if @bookmark.summary.present? %>
